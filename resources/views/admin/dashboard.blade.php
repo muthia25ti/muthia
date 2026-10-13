@@ -27,24 +27,24 @@
 	<meta name="author" content="Themesberg">
 
 	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
-	<link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets-admin/img/favicon/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets-admin/img/favicon/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets-admin/img/favicon/favicon-16x16.png') }}">
+	<link rel="manifest" href="{{ asset('assets-admin/img/favicon/site.webmanifest') }}">
+	<link rel="mask-icon" href="{{ asset('assets-admin/img/favicon/safari-pinned-tab.svg') }}" color="#ffffff">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
 
 	<!-- Volt CSS -->
-<link type="text/css" href="{{asset('assets-admin/css/volt.css')}}" rel="stylesheet">
+	<link type="text/css" href="{{ asset('assets-admin/css/volt.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
 	<nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
-		<a class="navbar-brand me-lg-5" href="../../index.html">
-			<img class="navbar-brand-dark" src="../../assets/img/brand/light.svg" alt="Volt logo" />
-			<img class="navbar-brand-light" src="../../assets/img/brand/dark.svg" alt="Volt logo" />
+		<a class="navbar-brand me-lg-5" href="{{ url('/') }}">
+			<img class="navbar-brand-dark" src="{{ asset('assets-admin/img/brand/light.svg') }}" alt="Volt logo" />
+			<img class="navbar-brand-light" src="{{ asset('assets-admin/img/brand/dark.svg') }}" alt="Volt logo" />
 		</a>
 		<div class="d-flex align-items-center">
 			<button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
@@ -61,12 +61,12 @@
 				class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
 				<div class="d-flex align-items-center">
 					<div class="avatar-lg me-4">
-						<img src="../../assets/img/team/profile-picture-3.jpg"
+						<img src="{{ asset('assets-admin/img/team/profile-picture-3.jpg') }}"
 							class="card-img-top rounded-circle border-white" alt="Bonnie Green">
 					</div>
 					<div class="d-block">
 						<h2 class="h5 mb-3">Hi, Jane</h2>
-						<a href="../../pages/examples/sign-in.html"
+						<a href="#"
 							class="btn btn-secondary btn-sm d-inline-flex align-items-center">
 							<svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +92,7 @@
 			</div>
 			<ul class="nav flex-column pt-3 pt-md-0">
 				<li class="nav-item  active ">
-					<a href="../../pages/dashboard/dashboard.html" class="nav-link">
+					<a href="#" class="nav-link">
 						<span class="sidebar-icon">
 							<svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
 								xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@
 					<div class="multi-level collapse " role="list" id="submenu-app" aria-expanded="false">
 						<ul class="flex-column nav">
 							<li class="nav-item ">
-								<a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+								<a class="nav-link" href="#">
 									<span class="sidebar-text">Bootstrap Tables</span>
 								</a>
 							</li>
@@ -155,13 +155,13 @@
 				<li class="nav-item">
 					<a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
 						<span class="sidebar-icon">
-							<img src="../../assets/img/themesberg.svg" height="20" width="28" alt="Themesberg Logo">
+							<img src="{{ asset('assets-admin/img/themesberg.svg') }}" height="20" width="28" alt="Themesberg Logo">
 						</span>
 						<span class="sidebar-text">Themesberg</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="../../pages/upgrade-to-pro.html"
+					<a href="#"
 						class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
 						<span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
 							<svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -224,7 +224,7 @@
 											<div class="col-auto">
 												<!-- Avatar -->
 												<img alt="Image placeholder"
-													src="../../assets/img/team/profile-picture-1.jpg"
+													src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}"
 													class="avatar-md rounded">
 											</div>
 											<div class="col ps-0 ms-2">
@@ -247,7 +247,7 @@
 											<div class="col-auto">
 												<!-- Avatar -->
 												<img alt="Image placeholder"
-													src="../../assets/img/team/profile-picture-2.jpg"
+													src="{{ asset('assets-admin/img/team/profile-picture-2.jpg') }}"
 													class="avatar-md rounded">
 											</div>
 											<div class="col ps-0 ms-2">
@@ -282,7 +282,7 @@
 								data-bs-toggle="dropdown" aria-expanded="false">
 								<div class="media d-flex align-items-center">
 									<img class="avatar rounded-circle" alt="Image placeholder"
-										src="../../assets/img/team/profile-picture-3.jpg">
+										src="{{ asset('assets-admin/img/team/profile-picture-3.jpg') }}">
 									<div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
 										<span class="mb-0 font-small fw-bold text-gray-900">Bonnie Green</span>
 									</div>
@@ -560,7 +560,7 @@
 												<!-- Avatar -->
 												<a href="#" class="avatar">
 													<img class="rounded" alt="Image placeholder"
-														src="../../assets/img/team/profile-picture-1.jpg">
+														src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}">
 												</a>
 											</div>
 											<div class="col-auto ms--2">
@@ -592,7 +592,7 @@
 												<!-- Avatar -->
 												<a href="#" class="avatar">
 													<img class="rounded" alt="Image placeholder"
-														src="../../assets/img/team/profile-picture-2.jpg">
+														src="{{ asset('assets-admin/img/team/profile-picture-2.jpg') }}">
 												</a>
 											</div>
 											<div class="col-auto ms--2">
@@ -624,7 +624,7 @@
 												<!-- Avatar -->
 												<a href="#" class="avatar">
 													<img class="rounded" alt="Image placeholder"
-														src="../../assets/img/team/profile-picture-3.jpg">
+														src="{{ asset('assets-admin/img/team/profile-picture-3.jpg') }}">
 												</a>
 											</div>
 											<div class="col-auto ms--2">
@@ -656,7 +656,7 @@
 												<!-- Avatar -->
 												<a href="#" class="avatar">
 													<img class="rounded" alt="Image placeholder"
-														src="../../assets/img/team/profile-picture-4.jpg">
+														src="{{ asset('assets-admin/img/team/profile-picture-4.jpg') }}">
 												</a>
 											</div>
 											<div class="col-auto ms--2">
@@ -801,9 +801,9 @@
 			<div class="col-12 col-xl-4">
 				<div class="col-12 px-0 mb-4">
 					<div class="card shadow border-0 text-center p-0">
-						<div class="profile-cover rounded-top" data-background="../../assets/img/profile-cover.jpg" style="background: url(&quot;../../assets/img/profile-cover.jpg&quot;);"></div>
+						<div class="profile-cover rounded-top" data-background="{{ asset('assets-admin/img/profile-cover.jpg') }}" style="background: url('{{ asset('assets-admin/img/profile-cover.jpg') }}');"></div>
 						<div class="card-body pb-5">
-							<img src="../../assets/img/team/profile-picture-1.jpg" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
+							<img src="{{ asset('assets-admin/img/team/profile-picture-1.jpg') }}" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
 							<h4 class="h3">Neil Sims</h4>
 							<h5 class="fw-normal">Senior Software Engineer</h5>
 							<p class="text-gray mb-4">New York, USA</p>
@@ -984,11 +984,11 @@
 	</main>
 
 	<!-- Core -->
-	<script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
-	<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="{{ asset('assets-admin/vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
+	<script src="{{ asset('assets-admin/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
 	<!-- Vendor JS -->
-	<script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+	<script src="{{ asset('assets-admin/vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
 </body>
 
 </html>
