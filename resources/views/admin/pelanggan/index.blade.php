@@ -302,29 +302,39 @@
                                         <th class="border-0 rounded-end">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    @foreach ($dataPelanggan as $item)
-                                        <tr>
-                                            <td>{{ $item->first_name }}</td>
-                                            <td>{{ $item->last_name }}</td>
-                                            <td>{{ $item->birthday }}</td>
-                                            <td>{{ $item->gender }}</td>
-                                            <td>{{ $item->email }}</td>
-                                            <td>{{ $item->phone }}</td>
-                                            <td>
-                                                <!-- Tombol Edit -->
-                                                <a href="{{ route('pelanggan.edit', $item->pelanggan_id) }}" class="btn btn-sm btn-warning">Edit</a>
+                               <tbody>
+    @foreach ($dataPelanggan as $item)
+        <tr>
+            <td>{{ $item->first_name }}</td>
+            <td>{{ $item->last_name }}</td>
+            <td>{{ $item->birthday }}</td>
+            <td>{{ $item->gender }}</td>
+            <td>{{ $item->email }}</td>
+            <td>{{ $item->phone }}</td>
+            <td>
+                <!-- Tombol Edit -->
+                <a href="{{ route('pelanggan.edit', $item->pelanggan_id) }}" class="btn btn-sm btn-info me-1">
+                    <svg class="icon icon-xs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                    </svg>
+                    Edit
+                </a>
 
-                                                <!-- Tombol Hapus -->
-                                                <form action="{{ route('pelanggan.destroy', $item->pelanggan_id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
+                <!-- Tombol Hapus -->
+                <form action="{{ route('pelanggan.destroy', $item->pelanggan_id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        <svg class="icon icon-xs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                        </svg>
+                        Hapus
+                    </button>
+                </form>
+            </td>
+        </tr>
+    @endforeach
+</tbody>
                             </table>
                         </div>
                     </div>
