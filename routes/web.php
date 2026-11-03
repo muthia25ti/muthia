@@ -6,6 +6,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PortofolioController;
+use App\Http\Controllers\UserController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -24,3 +25,4 @@ Route::get('/portofolio-saya', [PortofolioController::class, 'tampil'])->name('p
 
 // CRUD portofolio (admin): index, create, store, edit, update, destroy
 Route::resource('portofolio', PortofolioController::class)->except('show');
+Route::resource('user', UserController::class);
